@@ -1,6 +1,6 @@
 package com.jdp.creational.simplefactory;
 
-public class WoodenDoor implements Door {
+class WoodenDoor implements Door {
 
     private final int width;
     private final int height;

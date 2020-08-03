@@ -1,6 +1,6 @@
 package com.jdp.creational.simplefactory;
 
-public interface Door {
+interface Door {
 
     int getWidth();
 

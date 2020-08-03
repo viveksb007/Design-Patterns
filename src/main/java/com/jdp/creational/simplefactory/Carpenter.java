@@ -1,6 +1,6 @@
 package com.jdp.creational.simplefactory;
 
-public class Carpenter {
+class Carpenter {
 
     public static void main(String[] args) {
         Door door = DoorFactory.makeDoor(200, 300);

@@ -1,13 +1,15 @@
-package com.jdp.creational.builder;
+package com.jdp.creational.stepbuilder;
+
+import com.jdp.creational.builder.Ticket;
 
 class TicketCounter {
 
     public static void main(String[] args) {
-        Ticket ticket = TicketBuilder.builder()
+        Ticket ticket = TicketStepBuilder.builder()
                 .from("Sikkim")
                 .to("New Delhi")
+                .date("9th Aug 2020")
                 .name("viveksb007")
-                .date("12 Aug 2019")
                 .build();
         System.out.println(ticket);
     }

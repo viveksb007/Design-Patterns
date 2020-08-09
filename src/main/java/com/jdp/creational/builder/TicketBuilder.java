@@ -1,6 +1,6 @@
 package com.jdp.creational.builder;
 
-public class TicketBuilder {
+class TicketBuilder {
 
     private String from;
     private String to;

@@ -1,6 +1,8 @@
 package com.jdp.creational.builder;
 
-class Ticket {
+import com.jdp.creational.stepbuilder.TicketStepBuilder;
+
+public class Ticket {
 
     private final String from;
     private final String to;
@@ -12,6 +14,13 @@ class Ticket {
         this.to = ticketBuilder.getTo();
         this.date = ticketBuilder.getDate();
         this.name = ticketBuilder.getName();
+    }
+
+    public Ticket(TicketStepBuilder.Builder builder) {
+        this.from = builder.getFrom();
+        this.to = builder.getTo();
+        this.date = builder.getDate();
+        this.name = builder.getName();
     }
 
     public String getFrom() {

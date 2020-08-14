@@ -21,7 +21,7 @@ public class RomanToIntegerTest {
     @Test(expected = RuntimeException.class)
     public void shouldThrowExceptionWhenInvalidRomanNumber() {
         RomanToInteger romanToInteger = new RomanToInteger();
-        System.out.println(romanToInteger.convertRomanToInteger("IL"));
+        romanToInteger.convertRomanToInteger("IL");
     }
 
 }

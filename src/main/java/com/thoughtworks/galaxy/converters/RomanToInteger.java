@@ -18,8 +18,13 @@ public class RomanToInteger {
             EarthUnits first = romanUnits.get(i);
             EarthUnits second = (i == romanUnits.size() - 1) ? EarthUnits.I : romanUnits.get(i + 1);
             if (first.getValue() < second.getValue()) {
-                sum += (second.getValue() - first.getValue());
-                i++;
+                try {
+                    EarthUnits combination = EarthUnits.valueOf(first.name() + second.name());
+                    sum += combination.getValue();
+                    i++;
+                } catch (IllegalArgumentException e) {
+                    throw new RuntimeException("Invalid Roman Number");
+                }
             } else {
                 sum += first.getValue();
             }
